@@ -1,30 +1,11 @@
 from flask import Flask, render_template, request
-import mysql.connector
+import database
 
 app = Flask(__name__)
 
 # Database
 
-connection = mysql.connector.connect(user='root', host='127.0.0.1', database='gymsubs_flask')
-cursor = connection.cursor()
-
-
-def total_subscribers():
-    """
-    Get the number of subscribers
-    """
-    cursor.execute("SELECT COUNT(*) FROM subscribers")
-    totalsubscribers = cursor.fetchone()[0]
-    return totalsubscribers
-
-
-def subscriber_exist(fn):
-    """ See if a subscriber already exist """
-    cursor.execute("SELECT * FROM subscribers WHERE firstname = :firstname", {"firstname": fn})
-    if cursor.rowcount > 0:
-        return True
-    else:
-        return False
+db = database.Database()
 
 # Routes
 
@@ -32,10 +13,15 @@ def subscriber_exist(fn):
 @app.route('/')
 def index():
     """ Dashboard """
-    return render_template("index.html", totalSubscribers=total_subscribers())
+    return render_template("index.html", totalSubscribers=db.total_subscribers())
 
 
-@app.route("/newsubscriber", methods=["POST"])
+@app.route('/newsubscription', methods=['POST', 'GET'])
+def newsubscription():
+    return render_template("newsubscription.html")
+
+
+@app.route("/newsubscriber", methods=['POST', 'GET'])
 def newsubscriber():
     """ Add a new subscriber """
 
@@ -48,10 +34,12 @@ def newsubscriber():
     creationdate = request.form.get('creationdate')
     expirationdate = request.form.get('expirationdate')
 
-    if subscriber_exist(firstname) == True:
-        return render_template("error.html", message="Subscriber already exist! Renew her/his subscription")
-    else:
-        return render_template("newsubscriber.html")
+    if db.subscriber_exist(firstname):
+        return render_template("error.html",
+                               message="Subscriber already exist! Got to existing subscribers and renew the subsciption.")
+
+    db.addsubscriber(firstname, lastname, phone, email, creationdate, expirationdate)
+    return render_template("succes.html", message="You added a new subscription.")
 
 
 if __name__ == "__main__":
