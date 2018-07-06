@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+New Subscriber
+
+{% endblock %}
+
+{% block body %}
+<h3 class="animated rubberBand display-4 text-center addsubTitle">New subscriber</h3>
+<form class="formaddsub mx-auto" action="" method="post">
+
+    <div class="form-group">
+        <input class="form-control" name="firstname" placeholder="First name">
+    </div>
+    <div class="form-group">
+        <input class="form-control" name="lastname" placeholder="Last name">
+    </div>
+    <div class="form-group">
+        <input class="form-control" name="phonenumber" placeholder="Phone number">
+    </div>
+    <div class="form-group">
+        <input class="form-control" name="email" placeholder="Email" type="email">
+    </div>
+    <div class="form-group">
+        <input class="form-control" name="creationdate"  placeholder="Creation date: YYYY-MM-DD">
+    </div>
+    <div class="form-group">
+        <input class="form-control" name="expirationdate"  placeholder="Expiration date: YYYY-MM-DD">
+    </div>
+    <button class="btn btn-danger addsubscriber">Add subscriber</button>
+</form>
+
+{% endblock %}
