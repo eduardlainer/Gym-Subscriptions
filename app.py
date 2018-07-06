@@ -18,6 +18,7 @@ def index():
 
 @app.route('/newsubscription', methods=['POST', 'GET'])
 def newsubscription():
+    """ Add a new subscription page """
     return render_template("newsubscription.html")
 
 

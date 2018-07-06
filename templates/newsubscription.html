@@ -8,7 +8,7 @@ New Subscriber
 
 {% block body %}
 <h3 class="animated rubberBand display-4 text-center addsubTitle">New subscriber</h3>
-<form class="formaddsub mx-auto" action="" method="post">
+<form class="formaddsub mx-auto" action="{{ url_for('newsubscriber') }}" method="post">
 
     <div class="form-group">
         <input class="form-control" name="firstname" placeholder="First name">
