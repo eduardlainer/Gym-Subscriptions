@@ -37,4 +37,14 @@ body {
 
 }
 
+#errormessage {
+    font-family: 'Questrial', sans-serif;
+    margin-top: 30px;
+}
+
+#succesmessage {
+    font-family: 'Questrial', sans-serif;
+    margin-top: 30px;
+}
+
 
