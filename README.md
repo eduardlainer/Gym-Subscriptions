@@ -3,21 +3,21 @@
 
 # Structura
 
- - **static**
+  **static**
  * addsub.css
  * index.css
  * layout.css
  * logo.png
 
- - **templates**
+  **templates**
  * layout.html
  * error.html
  * succes.html
  * index.html
  * newsubscription.html
 
- - **app.py**
- - **database.py**
+ **app.py**
+ **database.py**
 
 
 ## Realizat in
