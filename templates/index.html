@@ -17,19 +17,27 @@ Dashboard
     </div>
     <div class="col-lg-4 col-sm-12">
         <div class="cards">
-            <p>0</p>
+            <p>{{ activeSubs }}</p>
             <p>Active Subscribtions</p>
         </div>
     </div>
     <div class="col-lg-4 col-sm-12">
         <div class="cards">
-            <p>0</p>
+            <p>{{ expiredSubs }}</p>
             <p>Expired Subscription</p>
         </div>
     </div>
 </div>
 
-
+<div class="btn links">
+    <a href="{{ url_for('newsubscription') }}">New subscriber</a>
+</div>
+<div class="btn links">
+    <a href="{{ url_for('existingsubscriber') }}">Existing subscriber</a>
+</div>
+<div class="btn links">
+    <a href="{{ url_for('checksubscription') }}">Check subscription</a>
+</div>
 
 
 {% endblock %}

@@ -6,7 +6,6 @@
 
 */
 
-
 /* Navbar style */
 
 .navbar {
@@ -23,19 +22,19 @@ img {
     /*margin-top: 80px;*/
 }
 
-
 /* Body style layout */
 
 body {
     text-align: center;
 }
 
-
 /*  brand style */
 
 .brand {
 
 }
+
+/* Error and succes messages */
 
 #errormessage {
     font-family: 'Questrial', sans-serif;
@@ -45,6 +44,42 @@ body {
 #succesmessage {
     font-family: 'Questrial', sans-serif;
     margin-top: 30px;
+}
+
+/* Linkksss */
+
+.links {
+    margin-top: 50px;
+    width: 160px;
+    height: 36px;
+    background-color: #c0392b;
+    font-family: 'Questrial', sans-serif;
+    text-align: center;
+    border: none;
+}
+
+.links a {
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.links a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+/* Subscription informations*/
+
+.subscriptioninfo {
+    font-family: 'Questrial', sans-serif;
+    margin-top: 10px;
+}
+
+/* alert */
+
+.alert {
+    width: 300px;
 }
 
 

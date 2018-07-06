@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+Existing subscriber
+
+{% endblock %}
+
+{% block body %}
+<h3 class="animated rubberBand display-4 text-center addsubTitle">Existing subscriber</h3>
+
+<form class="formaddsub mx-auto" action="{{ url_for('existingsub') }}" method="post">
+
+    <div class="form-group">
+        <select class="form-control" name="subscriber_id">
+            {% for sub in subscribers %}
+            <option value="{{ sub[0] }}">{{ sub[1] }} {{ sub[2] }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="form-group">
+        <input class="form-control" name="creationdate" placeholder="Creation date: YYYY-MM-DD">
+    </div>
+    <div class="form-group">
+        <input class="form-control" name="expirationdate" placeholder="Expiration date: YYYY-MM-DD">
+    </div>
+    <button class="btn btn-danger addsubscriber">Renew subscription</button>
+</form>
+
+{% endblock %}

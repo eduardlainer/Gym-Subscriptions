@@ -6,29 +6,27 @@
 
 */
 
-
 /* h3 title */
 
 h3 {
     margin-top: 100px;
 }
 
-
 /*  cards style */
 
-.cards{
+.cards {
     text-aling: center;
     margin-top: 80px;
     font-family: 'Questrial', sans-serif;
     font-size: 30px;
 }
 
-.cards p{
+.cards p {
     padding: 0;
     margin: 0;
 }
 
-.cards p:hover{
+.cards p:hover {
     font-size: 105%;
 }
 

@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+Dashboard
+
+{% endblock %}
+
+{% block body %}
+<h3 class="animated rubberBand display-4 text-center">Check subscription</h3>
+
+<form class="formaddsub mx-auto" action="{{ url_for('checksub') }}" method="post">
+    <div class="form-group">
+        <input class="form-control" name="firstname" placeholder="First name">
+    </div>
+    <div class="form-group">
+        <input class="form-control" name="lastname" placeholder="Last name">
+    </div>
+    <button class="btn btn-danger addsubscriber">Check subscription</button>
+</form>
+
+<div class="subscriptioninfo">
+    <p>Subscribtion info:</p>
+    {% for sub in subcheck %}
+    <p>Creation date: {{ sub[0] }}</p>
+    <p>Expiration date: {{ sub[1] }}</p>
+    {% endfor %}
+    <div class="alert {{ classalert }} mx-auto" role="alert">{{ message }}</div>
+</div>
+{% endblock %}
