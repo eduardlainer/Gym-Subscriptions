@@ -1,7 +1,12 @@
 ## Titlu proiect
 **Gym Subscription System**
 
-## Structura
+## Structura baza de date
+
+**tabel: subscribers -> rows: id(auto increment int, primary key), firstname(varchar), lastname(varchar), phoneNumber(varchar), email(varchar)**
+**tabel: subscriptions -> rows: id(auto increment int), subscribers_id(int), creation_date(datetime), expiration_date(datetime), current_date(datetime/currents_timestamp)**
+
+## Structura folder
 
   **static**
  * addsub.css
