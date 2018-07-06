@@ -1,7 +1,7 @@
 ## Titlu proiect
 **Gym Subscription System**
 
-# Structura
+## Structura
 
   **static**
  * addsub.css
