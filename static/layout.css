@@ -1,0 +1,40 @@
+/* General information
+
+    - #e67e22 (Navbar color)
+    - white (Body color)
+    - font-family: 'Questrial', sans-serif;  (Navbar font)
+
+*/
+
+
+/* Navbar style */
+
+.navbar {
+
+    background-color: #c0392b !important;
+    height: 80px;
+    color: white;
+
+}
+
+/* logo */
+
+img {
+    /*margin-top: 80px;*/
+}
+
+
+/* Body style layout */
+
+body {
+    text-align: center;
+}
+
+
+/*  brand style */
+
+.brand {
+
+}
+
+

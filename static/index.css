@@ -1,0 +1,39 @@
+/* General information
+
+    - #e67e22 (Navbar color)
+    - #ecf0f1 (Body color)
+    - font-family: 'Questrial', sans-serif;  (Navbar font)
+
+*/
+
+
+/* h3 title */
+
+h3 {
+    margin-top: 100px;
+}
+
+
+/*  cards style */
+
+.cards{
+    text-aling: center;
+    margin-top: 80px;
+    font-family: 'Questrial', sans-serif;
+    font-size: 30px;
+}
+
+.cards p{
+    padding: 0;
+    margin: 0;
+}
+
+.cards p:hover{
+    font-size: 105%;
+}
+
+.addbuton {
+    font-family: 'Questrial', sans-serif;
+    margin-top: 50px;
+    background-color: #c0392b !important;
+}
