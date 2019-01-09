@@ -30,5 +30,3 @@
 ## Realizat in
 * Python 3.7 + Flask + MySQL + HTML + CSS + Bootstrap
 
-## Realizat de
-**Eduard Lainer**
