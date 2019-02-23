@@ -2,10 +2,12 @@
 **Gym subscription system**
 
 ## Database structure
-
-**tabel: subscribers -> rows: id(auto increment int, primary key), firstname(varchar), lastname(varchar), phoneNumber(varchar), email(varchar)**
-
-**tabel: subscriptions -> rows: id(auto increment int), subscribers_id(int), creation_date(datetime), expiration_date(datetime), current_date(datetime/currents_timestamp)**
+```
+table: subscribers -> rows: id(auto increment int, primary key), firstname(varchar), lastname(varchar), phoneNumber(varchar), email(varchar)
+```
+```
+table: subscriptions -> rows: id(auto increment int), subscribers_id(int), creation_date(datetime), expiration_date(datetime), current_date(datetime/currents_timestamp)
+```
 
 ## Structura folder
 
@@ -28,5 +30,5 @@
 
 
 ## Coded in
-* Python 3.7 + Flask + MySQL + HTML + CSS + Bootstrap
+Python 3.6, Flask, MySQL,HTML5, CSS3, Bootstrap
 
