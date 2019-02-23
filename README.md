@@ -1,7 +1,7 @@
-## Titlu proiect
-**Gym Subscription System**
+## Project Title
+**Gym subscription system**
 
-## Structura baza de date
+## Database structure
 
 **tabel: subscribers -> rows: id(auto increment int, primary key), firstname(varchar), lastname(varchar), phoneNumber(varchar), email(varchar)**
 
@@ -27,6 +27,6 @@
  **database.py**
 
 
-## Realizat in
+## Coded in
 * Python 3.7 + Flask + MySQL + HTML + CSS + Bootstrap
 
